@@ -4,6 +4,7 @@ class Post
   field :title, type: String
   field :body, type: String
   field :duration, type: Integer
+  field :date, type: Date
 
 
   has_many :comments

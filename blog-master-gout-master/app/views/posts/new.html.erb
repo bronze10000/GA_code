@@ -18,6 +18,8 @@
 			<%= f.text_area :body, size: "40x10" %><br>
 			Duration of Gout Attack:
 			<%= f.number_field :duration %><br><br>
+			Date of Attack:
+			<%= f.date_field :date %><br><br>
 
 			<%= f.submit "Create Post", class: "btn btn-success btn-lg" %>
 		<% end %>
