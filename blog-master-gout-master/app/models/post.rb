@@ -5,6 +5,7 @@ class Post
   field :body, type: String
   field :duration, type: Integer
   field :date, type: Date
+  field :beer, type: checkbox
 
 
   has_many :comments

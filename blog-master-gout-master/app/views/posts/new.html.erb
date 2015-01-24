@@ -20,6 +20,11 @@
 			<%= f.number_field :duration %><br><br>
 			Date of Attack:
 			<%= f.date_field :date %><br><br>
+			Gout triggers:
+			<div class="field">
+	    		<%= f.label "beer" %> <br />
+	    		<%= f.check_box :beer %> <br />
+			</div>
 
 			<%= f.submit "Create Post", class: "btn btn-success btn-lg" %>
 		<% end %>
