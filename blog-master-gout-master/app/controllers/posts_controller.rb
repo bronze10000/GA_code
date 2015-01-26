@@ -7,15 +7,18 @@ class PostsController < ApplicationController
 		@hash = {}
 
 		@posts.reverse.each do |post|
-			@hash.update({post.created_at => Random.rand(11)})
+			# @hash.update({post.created_at => Random.rand(11)})
+
+			@hash.update({post.date => post.duration})
+
 		end
 	end
 
 	def show
 
 		@post = Post.find(params[:id])
-		@comments =@post.comments
-		@new_comment = Comment.new(post_id: @post.id)
+		# @comments =@post.comments
+		# @new_comment = Comment.new(post_id: @post.id)
 
 	end
 
@@ -25,7 +28,8 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(params.require(:post).permit(:title, :body, :duration, :date, :beer))
+		@post = Post.new(params.require(:post).permit(:title, :body, :duration, :date, :beer, :beef,
+			:mushroom, :softdrink, :sausage, :octopus))
 
 		if @post.save
 			redirect_to posts_path

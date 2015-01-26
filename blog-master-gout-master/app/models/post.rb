@@ -5,10 +5,17 @@ class Post
   field :body, type: String
   field :duration, type: Integer
   field :date, type: Date
-  field :beer, type: checkbox
+  field :beer, type: Boolean
+  field :beef, type: Boolean
+  field :mushroom, type: Boolean
+  field :octopus, type: Boolean
+  field :sausage, type: Boolean  
+  field :softdrink, type: Boolean
 
 
-  has_many :comments
+
+
+  # has_many :comments
 
   validates :title, :body, :duration,  presence: true
 

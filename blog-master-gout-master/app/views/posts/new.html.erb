@@ -1,6 +1,6 @@
 <div class = "container-fluid">
 
-	<h1 class="jumbotron" >Welcome to Gouts App</h1>
+	<h1 class="jumbotron text-center" >Welcome to Gouts App</h1>
 <%# 	<%= link_to(image_tag("/assets/gout.jpg", :alt "gout"))  %>
 
 <%# <%= image_tag 'gout.jpg' %>
@@ -17,65 +17,49 @@
 			Body:
 			<%= f.text_area :body, size: "40x10" %><br>
 			Duration of Gout Attack:
-			<%= f.number_field :duration %><br><br>
+			<%= f.number_field :duration %><br>
 			Date of Attack:
-			<%= f.date_field :date %><br><br>
-			Gout triggers:
-			<div class="field">
-	    		<%= f.label "beer" %> <br />
-	    		<%= f.check_box :beer %> <br />
-			</div>
-
-			<%= f.submit "Create Post", class: "btn btn-success btn-lg" %>
-		<% end %>
+			<%= f.date_field :date %><br>
+			
 	  </div>
 
 	  <div id="data-content" class="col-xs-6">
-	  	<p>This portion of webpage will contain buttons.</p>
-	  	<div>
-	  		<h3>Gout Triggers</h3>
 	  	
-			  	<!-- Indicates caution should be taken with this action -->
-				<button type="button" class="btn btn-warning">Mushroom</button>
+	  	Gout triggers:
+			<div class="field">
+	    		<%= f.label "beer" %>
+	    		<%= f.check_box :beer %> <br>
+			</div>
 
-				<!-- Indicates a dangerous or potentially negative action -->
-				<button type="button" class="btn btn-danger">Beer</button>
+			<div class="field">
+	    		<%= f.label "beef" %>
+	    		<%= f.check_box :beef %> <br>
+			</div>
 
-				<!-- Indicates caution should be taken with this action -->
-				<button type="button" class="btn btn-warning">Asparagus</button>
+			<div class="field">
+	    		<%= f.label "mushroom" %>
+	    		<%= f.check_box :mushroom %> <br>
+			</div>
 
-				<!-- Indicates a dangerous or potentially negative action -->
-				<button type="button" class="btn btn-danger">Red Meats</button>
+			<div class="field">
+	    		<%= f.label "softdrink" %>
+	    		<%= f.check_box :softdrink %> <br>
+			</div>
 
-				<!-- Indicates caution should be taken with this action -->
-				<button type="button" class="btn btn-warning">Octopus</button>
+			<div class="field">
+	    		<%= f.label "octopus" %>
+	    		<%= f.check_box :octopus %> <br>
+			</div>
 
-				<!-- Indicates a dangerous or potentially negative action -->
-				<button type="button" class="btn btn-danger">Sausage</button>
-
-				<div class="radio">
-		        <label>
-		          <input type="radio" name="loginTypeRadios" id="loginTypeNew" value="new_user">
-		          New user
-		        </label>
-      			</div>
-
-			<h3>Gout Prohibitives</h3>
-
-				<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-				<button type="button" class="btn btn-primary">Vitamin C</button>
-
-				<!-- Indicates a successful or positive action -->
-				<button type="button" class="btn btn-success">Coffee</button>
-
-				<!-- Contextual button for informational alert messages -->
-				<button type="button" class="btn btn-info">Exercise</button>
+			<div class="field">
+	    		<%= f.label "sausage" %>
+	    		<%= f.check_box :sausage %> <br>
+			</div>
 
 
+			<%= f.submit "Create Post", class: "btn btn-success btn-lg" %>
+		<% end %>
 
-
-
-	</div>
 
 
 </div>

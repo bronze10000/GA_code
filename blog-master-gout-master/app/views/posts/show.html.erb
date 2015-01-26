@@ -8,22 +8,22 @@
 <br>
 <br>
 
-<div>
-	<% @comments.each do |comment|%>
+<!-- <div>
+<%# 	<% @comments.each do |comment|%>
 		<p> <%= comment.body %>
 			<br>
 			<%= comment.date_published %>
 		</p>
 
-	<% end %>
-
+<%# 	<% end %>
+ %>
 	<h4>Create a comment: </h4>
-	<%= form_for(@new_comment, url: post_comments_path(@post)) do |f| %>
+	<%# <%= form_for(@new_comment, url: post_comments_path(@post)) do |f| %>
 
-		<%= f.text_area :body %>
-
-		<%= f.submit "Add Comment"%>
-	<% end %>
-</div>
+<%# 		<%= f.text_area :body %>
+ %>
+<%# 		<%= f.submit "Add Comment"%>
+<%# <%#	<% end -%>
+ %></div> -->
 
 <%= link_to "View Posts", posts_path%>
